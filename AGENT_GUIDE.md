@@ -46,6 +46,19 @@ This is a first-class workflow in OpenMontage.
 
 If a model misses this distinction, it will often fall back to plain search + guesswork. That is incorrect for OpenMontage.
 
+## Connected Source Entry Point
+
+When the user wants a Streamdex-style briefing from connected or private tools already available in the host app — broker data, market/news APIs, repo docs, calendars, internal systems, or search — do not jump straight into generic web research.
+
+1. **Read:** `skills/meta/streamdex-source-intake.md`
+2. **Run a best-effort host-source discovery pass** using whatever connected tools the host app already exposes
+3. **Capture a loose `external_context` package** with useful claims, refs, and gaps
+4. **Then** select the normal pipeline
+
+For the hackathon path, prefer `hybrid` first. Use `avatar-spokesperson` only if the user explicitly wants a presenter on screen.
+
+Keep the intake light. If one source is missing, continue with what is available.
+
 ## Rule Zero — All Production Goes Through a Pipeline
 
 **Every video production request MUST go through the pipeline system. No exceptions.**

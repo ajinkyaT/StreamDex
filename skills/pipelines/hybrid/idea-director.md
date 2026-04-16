@@ -11,8 +11,15 @@ Hybrid is not a catch-all. Your first job is to define what stays primary.
 - `docs/hybrid-video-best-practices.md`
 - `skills/creative/storytelling.md`
 - `skills/creative/video-editing.md`
+- `skills/meta/streamdex-source-intake.md` (when the brief includes connected or private source context)
 
 ## Process
+
+### 0. Check For Host Context
+
+If an `external_context` package already exists, read it first.
+
+This is the fastest path for Streamdex-style briefs. Do not insist on a formal schema; use the context as a practical source bundle and keep moving.
 
 ### 1. Choose The Anchor Medium
 
@@ -23,6 +30,8 @@ Pick the storytelling anchor:
 - `screen_recording`
 - `still_sequence`
 - `narration_led_graphics`
+
+For Streamdex-style briefs, `narration_led_graphics` is usually the fastest default when the source is mostly broker data, news, or docs. If the source is richer in screenshots or clips, `screen_recording`, `broll_footage`, or `still_sequence` may be a better anchor.
 
 ### 2. Define Support Layers
 
@@ -52,6 +61,10 @@ Common outputs:
 
 Recommended metadata keys:
 
+- `external_context_present`
+- `external_context_summary`
+- `source_channels`
+- `raw_context_refs`
 - `anchor_medium`
 - `source_inventory`
 - `support_layers`

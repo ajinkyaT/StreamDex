@@ -18,6 +18,12 @@ Animation videos differ from general explainers: the research must cover both **
 
 ## Process
 
+### Step 0.5: Check For External Context
+
+If the project already has an `external_context` package from a connected-source intake pass, read it before broad web research.
+
+Treat it as a useful starting signal, not a rigid schema. Pull out any concrete claims, timestamps, source refs, or priority areas that can guide the search. If the package already answers part of the question, reuse that information and only research what is missing or high-risk.
+
 ### Step 0: Check for Reference Video Context
 
 Before starting research, check if a VideoAnalysisBrief exists for this project. If it
