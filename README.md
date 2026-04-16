@@ -1,8 +1,8 @@
 <p align="center">
-  <img src="assets/logo.png" alt="OpenMontage" width="200">
+  <img src="assets/logo.png" alt="Streamdex" width="200">
 </p>
 
-<h1 align="center">OpenMontage</h1>
+<h1 align="center">Streamdex</h1>
 
 <p align="center"><strong>The first open-source, agentic video production system.</strong></p>
 
@@ -20,25 +20,17 @@
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-AGPLv3-blue.svg" alt="License"></a>
 </p>
 
-<p align="center"><strong>Follow The Build</strong></p>
-
-<p align="center">
-  <a href="https://www.youtube.com/@OpenMontage"><img src="https://img.shields.io/badge/YouTube-%40OpenMontage-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="YouTube"></a>
-  <a href="https://x.com/calesthioailabs"><img src="https://img.shields.io/badge/X-%40calesthioailabs-111111?style=for-the-badge&logo=x&logoColor=white" alt="X"></a>
-  <a href="https://github.com/calesthio/OpenMontage/discussions"><img src="https://img.shields.io/badge/Community-GitHub%20Discussions-0b1220?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Discussions"></a>
-</p>
-
 ---
 
 Turn your AI coding assistant into a full video production studio. Describe what you want in plain language — your agent handles research, scripting, asset generation, editing, and final composition.
 
-**Important distinction:** OpenMontage can make image-based videos, but it can also make a real **video video** for free/open-source workflows: the agent builds a corpus from free stock footage and open archives, retrieves actual motion clips, edits them into a timeline, and renders a finished piece. That is not the usual "animate a handful of stills and call it video" trick.
+**Important distinction:** Streamdex can make image-based videos, but it can also make a real **video video** for free/open-source workflows: the agent builds a corpus from free stock footage and open archives, retrieves actual motion clips, edits them into a timeline, and renders a finished piece. That is not the usual "animate a handful of stills and call it video" trick.
 
 <div align="center">
   <video src="https://github.com/user-attachments/assets/f77ce7a4-68b8-4f94-a287-e94bf50a32e1" width="100%" controls></video>
 </div>
 
-> **"SIGNAL FROM TOMORROW"** — a cinematic sci-fi trailer fully produced through OpenMontage: concept, script, scene plan, Veo-generated motion clips, soundtrack, and Remotion composition.
+> **"SIGNAL FROM TOMORROW"** — a cinematic sci-fi trailer fully produced through Streamdex: concept, script, scene plan, Veo-generated motion clips, soundtrack, and Remotion composition.
 
 <div align="center">
   <video src="https://github.com/user-attachments/assets/8daca07f-cdf8-4bec-89c3-9dc2176363fa" width="100%" controls></video>
@@ -70,17 +62,13 @@ Turn your AI coding assistant into a full video production studio. Describe what
 
 > **"Into the Abyss"** — a deep ocean exploration rendered in anime style. Bioluminescent gardens, coral cathedrals, and creatures of light — 12 FLUX-generated images with sparkle and mist particle overlays, light-ray effects, smooth camera motion, and ambient oceanic soundtrack. Total cost: **$0.15**. Zero video generation APIs needed.
 
-<p align="center">
-  <a href="https://www.youtube.com/@OpenMontage?sub_confirmation=1"><strong>Subscribe to @OpenMontage on YouTube</strong></a> to see new videos as they ship — every video includes the full prompt, pipeline, tools used, and cost so you can reproduce it yourself.
-</p>
-
 ---
 
 ## Start From A Video You Already Love
 
 Starting from a reference video is often faster than starting from a blank prompt.
 
-OpenMontage can start from a **YouTube video, Short, Reel, TikTok, or local clip** and turn it into a grounded production plan:
+Streamdex can start from a **YouTube video, Short, Reel, TikTok, or local clip** and turn it into a grounded production plan:
 
 1. **Paste a reference video**
 2. **The agent analyzes transcript, pacing, scenes, keyframes, and style**
@@ -113,8 +101,8 @@ Works with **Claude Code, Cursor, Copilot, Windsurf, Codex** — any AI coding a
 ### Install & Run
 
 ```bash
-git clone https://github.com/calesthio/OpenMontage.git
-cd OpenMontage
+git clone https://github.com/ajinkyaT/StreamDex.git
+cd StreamDex
 make setup
 ```
 
@@ -143,7 +131,7 @@ This repo is built for agentic operation. If you're an OpenClaw-style agent, her
 1. **Read the contract first**
    Start with [`AGENT_GUIDE.md`](AGENT_GUIDE.md), then [`PROJECT_CONTEXT.md`](PROJECT_CONTEXT.md).
 2. **Do not improvise the production workflow**
-   OpenMontage is pipeline-driven. Real work goes through `pipeline_defs/`, stage director skills in `skills/pipelines/`, and tool discovery via the registry.
+   Streamdex is pipeline-driven. Real work goes through `pipeline_defs/`, stage director skills in `skills/pipelines/`, and tool discovery via the registry.
 3. **Check the actual capability envelope**
    Run:
    ```bash
@@ -295,13 +283,13 @@ Each stage has a dedicated **director skill** — a markdown instruction file th
 
 ---
 
-## Why OpenMontage?
+## Why Streamdex?
 
-Most AI video tools give you a single clip from a prompt. OpenMontage gives you an **end-to-end production pipeline** — the same structured process a real production team follows, automated by your AI agent.
+Most AI video tools give you a single clip from a prompt. Streamdex gives you an **end-to-end production pipeline** — the same structured process a real production team follows, automated by your AI agent.
 
-Most "free AI video" stacks quietly mean "animate still images." OpenMontage can do that too, but it can also build a finished video from **real footage** pulled from free/open sources, ranked semantically, edited intentionally, and rendered as a proper timeline.
+Most "free AI video" stacks quietly mean "animate still images." Streamdex can do that too, but it can also build a finished video from **real footage** pulled from free/open sources, ranked semantically, edited intentionally, and rendered as a proper timeline.
 
-Edit your own talking-head footage. Generate a fully animated explainer from scratch. Cut a 2-hour podcast into a dozen social clips. Translate and dub your content into 10 languages. Build a cinematic brand teaser from stock footage and AI-generated scenes. **If a production team can make it, OpenMontage can orchestrate it.**
+Edit your own talking-head footage. Generate a fully animated explainer from scratch. Cut a 2-hour podcast into a dozen social clips. Translate and dub your content into 10 languages. Build a cinematic brand teaser from stock footage and AI-generated scenes. **If a production team can make it, Streamdex can orchestrate it.**
 
 - **12 production pipelines** — explainers, talking heads, screen demos, cinematic trailers, animations, podcasts, localization, documentary montages, and more
 - **52 production tools** — spanning video generation, image creation, text-to-speech, music, audio mixing, subtitles, enhancement, and analysis
@@ -318,7 +306,7 @@ Edit your own talking-head footage. Generate a fully animated explainer from scr
 
 ## How It Works
 
-OpenMontage uses an **agent-first architecture**. There is no code orchestrator. Your AI coding assistant IS the orchestrator.
+Streamdex uses an **agent-first architecture**. There is no code orchestrator. Your AI coding assistant IS the orchestrator.
 
 ```
 You: "Make an explainer video about how black holes form"
@@ -361,7 +349,7 @@ Final video output -- only if self-review passes
 ## Architecture
 
 ```
-OpenMontage/
+Streamdex/
 ├── tools/              # 48 Python tools (the agent's hands)
 │   ├── video/          # 13 video gen tools + compose, stitch, trim
 │   ├── audio/          # 4 TTS providers + Suno/ElevenLabs music, mixing, enhancement
@@ -389,11 +377,11 @@ OpenMontage/
 
 ```
 Layer 1: tools/ + pipeline_defs/     "What exists" — executable capabilities + orchestration
-Layer 2: skills/                     "How to use it" — OpenMontage conventions and quality bars
+Layer 2: skills/                     "How to use it" — Streamdex conventions and quality bars
 Layer 3: .agents/skills/             "How it works" — 47 external technology knowledge packs
 ```
 
-Each tool declares which Layer 3 skills it relies on. The agent reads Layer 1 to know what's available, Layer 2 to know how OpenMontage wants it used, and Layer 3 for deep technical knowledge when needed.
+Each tool declares which Layer 3 skills it relies on. The agent reads Layer 1 to know what's available, Layer 2 to know how Streamdex wants it used, and Layer 3 for deep technical knowledge when needed.
 
 ---
 
@@ -545,7 +533,7 @@ Built-in render profiles for every major platform:
 
 ## Production Governance
 
-OpenMontage treats video production like real engineering — with quality gates, audit trails, and enforcement at every stage.
+Streamdex treats video production like real engineering — with quality gates, audit trails, and enforcement at every stage.
 
 ### Quality Gates
 
@@ -581,7 +569,7 @@ No surprise bills. The agent tells you what it will cost before it spends.
 
 ## Agent Compatibility
 
-OpenMontage works with any AI coding assistant that can read files and execute Python. Dedicated instruction files are included for:
+Streamdex works with any AI coding assistant that can read files and execute Python. Dedicated instruction files are included for:
 
 | Platform | Config File |
 |----------|------------|
@@ -599,7 +587,7 @@ All platform files point to the shared `AGENT_GUIDE.md` (operating guide and age
 
 ## Contributing
 
-OpenMontage is built to be extended. The two most common contributions:
+Streamdex is built to be extended. The two most common contributions:
 
 ### Adding a New Tool
 
@@ -615,26 +603,6 @@ OpenMontage is built to be extended. The two most common contributions:
 3. Reference existing tools — or add new ones if needed
 
 See `docs/ARCHITECTURE.md` for the full technical reference, `docs/PROVIDERS.md` for the complete provider guide (setup, pricing, free tiers), and `AGENT_GUIDE.md` for the agent contract.
-
-### Join the Community
-
-We use [GitHub Discussions](https://github.com/calesthio/OpenMontage/discussions) to share work and ideas:
-
-- **[Show and Tell](https://github.com/calesthio/OpenMontage/discussions/categories/show-and-tell)** — Share videos you've made, prompts that worked well, or creative workflows you've discovered
-- **[Ideas](https://github.com/calesthio/OpenMontage/discussions/categories/ideas)** — Suggest new pipelines, tools, style playbooks, or integrations
-- **[Q&A](https://github.com/calesthio/OpenMontage/discussions/categories/q-a)** — Ask questions about setup, pipelines, or troubleshooting
-
-Made something cool? Post it in Show and Tell — we'd love to see what you build.
-
----
-
-## Contact
-
-For updates, releases, and behind-the-scenes build notes, follow [@calesthioailabs](https://x.com/calesthioailabs).
-
-For bugs, feature requests, and workflow discussions, use [GitHub Issues](https://github.com/calesthio/OpenMontage/issues) and [GitHub Discussions](https://github.com/calesthio/OpenMontage/discussions) so everything stays visible and actionable.
-
----
 
 ## Testing
 
@@ -654,6 +622,6 @@ make test
 
 ---
 
-**OpenMontage** — Production-grade video with real quality enforcement, orchestrated by your AI assistant.
+**Streamdex** — Production-grade video with real quality enforcement, orchestrated by your AI assistant.
 
 If this project looks useful to you, a star would really mean a lot — it helps others discover it too.

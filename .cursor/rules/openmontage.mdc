@@ -1,10 +1,10 @@
 ---
-description: OpenMontage project rules
+description: Streamdex project rules
 globs: ["**/*"]
 alwaysApply: true
 ---
 
-# OpenMontage
+# Streamdex
 
 MANDATORY: Read `AGENT_GUIDE.md` before responding to ANY user message.
 

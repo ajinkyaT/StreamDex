@@ -8,7 +8,7 @@ This is a fast discovery pass, not a formal data contract. Keep it loose, practi
 
 ## Goal
 
-Collect just enough trusted context to route the request into a normal OpenMontage pipeline, usually `hybrid` first.
+Collect just enough trusted context to route the request into a normal Streamdex pipeline, usually `hybrid` first.
 
 ## Process
 

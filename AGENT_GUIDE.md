@@ -1,6 +1,6 @@
-# OpenMontage - Agent Guide
+# Streamdex - Agent Guide
 
-Start here. This is the complete operating guide and agent contract for OpenMontage.
+Start here. This is the complete operating guide and agent contract for Streamdex.
 
 For architecture, key files, and conventions see [`PROJECT_CONTEXT.md`](PROJECT_CONTEXT.md).
 
@@ -24,7 +24,7 @@ When the user provides a **video URL or local video file as inspiration** — fo
 
 — do **not** treat this as a generic web-search or prompt-writing request.
 
-This is a first-class workflow in OpenMontage.
+This is a first-class workflow in Streamdex.
 
 ### Required behavior
 
@@ -44,7 +44,7 @@ This is a first-class workflow in OpenMontage.
 - **Reference-driven request:** "make me something like this" -> use `video-reference-analyst.md`
 - **Source-footage request:** "edit this footage" / "cut this into clips" -> use `source_media_review` and the appropriate footage-led pipeline
 
-If a model misses this distinction, it will often fall back to plain search + guesswork. That is incorrect for OpenMontage.
+If a model misses this distinction, it will often fall back to plain search + guesswork. That is incorrect for Streamdex.
 
 ## Connected Source Entry Point
 
@@ -80,9 +80,9 @@ When the user asks to make, create, produce, or generate any video content — a
 
 The intelligence is in the skills, not in improvised code. An agent that reads the director skills and Layer 3 knowledge will produce significantly better output than one that calls tools directly with generic prompts.
 
-## What OpenMontage Is
+## What Streamdex Is
 
-OpenMontage is an instruction-driven video production system. The AI agent IS the intelligence — it reads instructions (pipeline manifests + stage director skills + meta skills) and drives the pipeline using tools.
+Streamdex is an instruction-driven video production system. The AI agent IS the intelligence — it reads instructions (pipeline manifests + stage director skills + meta skills) and drives the pipeline using tools.
 
 ```
 Agent reads pipeline manifest (YAML) -> reads stage director skill (MD)
@@ -378,7 +378,7 @@ The routing is automatic — the `render` operation in `video_compose` calls `_n
 
 ## Capability Discovery
 
-OpenMontage uses two layers for capability choice:
+Streamdex uses two layers for capability choice:
 
 - selector tools: capability-level routing such as `tts_selector` and `video_selector`
 - provider tools: concrete tools discovered via the registry that call a specific backend
@@ -581,12 +581,12 @@ Tool rules:
 
 ## Layer Map
 
-OpenMontage has three instruction layers:
+Streamdex has three instruction layers:
 
 1. `tools/`
    What exists, what is available, cost, runtime, fallback, related skills.
 2. `skills/`
-   How OpenMontage wants those tools used in pipelines.
+   How Streamdex wants those tools used in pipelines.
 3. `.agents/skills/`
    Raw vendor or technology knowledge.
 

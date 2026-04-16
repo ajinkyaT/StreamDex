@@ -1,6 +1,6 @@
-# OpenMontage Provider Guide
+# Streamdex Provider Guide
 
-Everything you need to know about every provider in OpenMontage — setup instructions, pricing, free tiers, and what each unlocks.
+Everything you need to know about every provider in Streamdex — setup instructions, pricing, free tiers, and what each unlocks.
 
 ---
 
@@ -88,7 +88,7 @@ Current xAI docs pricing for the Grok media models:
 | `grok-imagine-video` at 720p | $0.07/sec |
 | `grok-imagine-video` input images | $0.002 per input image |
 
-OpenMontage now uses those published rates in the Grok tool estimators.
+Streamdex now uses those published rates in the Grok tool estimators.
 
 ---
 

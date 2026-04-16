@@ -1,4 +1,4 @@
-﻿# OpenMontage â€" Skill Index
+﻿# Streamdex - Skill Index
 
 > For the full agent onboarding guide, see [`AGENT_GUIDE.md`](../AGENT_GUIDE.md) in the project root.
 
@@ -11,23 +11,23 @@ Layer 1: tools/tool_registry.py          "What tools exist and what they can do"
          tools/base_tool.py               Each tool declares: capabilities, tier, status,
                                           dependencies, cost, and agent_skills[]
 
-         â†" agent_skills[] points to â†"
+         -> agent_skills[] points to ->
 
-Layer 2: skills/                          "How OpenMontage uses these tools"
+Layer 2: skills/                          "How Streamdex uses these tools"
          Project-specific conventions:     Pipeline integration, artifact mappings,
          {core,creative,meta,pipelines}/   enhancement chain order, quality checklists
 
-         â†" references underlying tech in â†"
+         -> references underlying tech in ->
 
 Layer 3: .agents/skills/                  "How the technology itself works"
          Generic API knowledge from        Correct import paths, code patterns,
-         skills.sh (47 installed skills)   constraints, parameters â€" tech-agnostic
+         skills.sh (47 installed skills)   constraints, parameters - tech-agnostic
 ```
 
 **How the agent uses this:**
 1. The orchestrator queries Layer 1 (`tool_registry.support_envelope()`) to see what's available
 2. Each tool's `agent_skills[]` field names the Layer 3 skills it relies on
-3. Layer 2 skills (this directory) teach the agent OpenMontage-specific conventions
+3. Layer 2 skills (this directory) teach the agent Streamdex-specific conventions
 4. Layer 3 skills (`.agents/skills/`) provide generic API knowledge, loaded on-demand
 
 ## Capability Families & Tool Discovery
@@ -96,21 +96,21 @@ Key capability families to look for in the output:
 | â†³ Sora Prompting | `creative/prompting/sora-prompting.md` | Sora 2 structured template, advanced fields | `ai-video-gen` |
 | â†³ VEO Prompting | `creative/prompting/veo-prompting.md` | VEO 3.1 14-component structure, art movements | `ai-video-gen` |
 | â†³ LTX Prompting | `creative/prompting/ltx-prompting.md` | LTX-2 6-element structure, audio prompting | `ltx2` |
-| â†³ HunyuanVideo Prompting | `creative/prompting/hunyuan-prompting.md` | HunyuanVideo formula, I2V best practices | â€" |
-| Storytelling | `creative/storytelling.md` | Narrative structure, hooks, pacing, Mayer's principles | â€" |
+| â†³ HunyuanVideo Prompting | `creative/prompting/hunyuan-prompting.md` | HunyuanVideo formula, I2V best practices | - |
+| Storytelling | `creative/storytelling.md` | Narrative structure, hooks, pacing, Mayer's principles | - |
 | Sound Design | `creative/sound-design.md` | Audio ducking, LUFS targets, SFX timing, AI TTS mixing | `elevenlabs` |
-| Typography | `creative/typography.md` | Font selection, text sizing, safe zones, caption styling | â€" |
+| Typography | `creative/typography.md` | Font selection, text sizing, safe zones, caption styling | - |
 | ManimCE Usage | `creative/manim-usage.md` | Scene composition, animation timing, color usage | `manimce-best-practices` |
 | Image Gen Usage | `creative/image-gen-usage.md` | Prompt consistency, hero reference, batch strategy | `flux-best-practices`, `bfl-api` |
 | Image Provider Usage | `creative/image-provider-usage.md` | Provider selection (FLUX/Grok/OpenAI/Recraft/stock), cost-quality tradeoffs | `flux-best-practices`, `bfl-api`, `grok-media` |
 | B-Roll Planning | `creative/broll-planning.md` | Stock vs. generated decision, query construction, footage evaluation | — |
 | Stock Sourcing Usage | `creative/stock-sourcing-usage.md` | Pexels/Pixabay usage, parameters, licensing, integration | — |
-| Scene Detect Usage | `creative/scene-detect-usage.md` | Threshold tuning, algorithm selection, content presets | â€" |
+| Scene Detect Usage | `creative/scene-detect-usage.md` | Threshold tuning, algorithm selection, content presets | - |
 | Diagram Gen Usage | `creative/diagram-gen-usage.md` | Complexity limits, progressive building, themes | `beautiful-mermaid` |
 | Music Gen Usage | `creative/music-gen-usage.md` | BPM selection, prompt engineering, duration matching | `music`, `elevenlabs` |
-| Background Removal | `creative/bg-remove-usage.md` | Model selection, alpha matting, compositing workflows | â€" |
-| Upscaling | `creative/upscale-usage.md` | Scale factor, model selection, face-aware upscaling | â€" |
-| Face Restoration | `creative/face-restore-usage.md` | CodeFormer/GFPGAN selection, fidelity tuning, vs face_enhance | â€" |
+| Background Removal | `creative/bg-remove-usage.md` | Model selection, alpha matting, compositing workflows | - |
+| Upscaling | `creative/upscale-usage.md` | Scale factor, model selection, face-aware upscaling | - |
+| Face Restoration | `creative/face-restore-usage.md` | CodeFormer/GFPGAN selection, fidelity tuning, vs face_enhance | - |
 | Lip Sync | `creative/lip-sync-usage.md` | Wav2Lip model selection, dubbing workflows, input requirements | `faceswap` |
 | Talking Head Gen | `creative/talking-head-gen-usage.md` | SadTalker/MuseTalk, photo-to-video, expression tuning | `avatar-video` |
 | Video Understanding | `creative/video-understand-usage.md` | Visual QA, quality gating, scene classification | `video-understand` |
@@ -121,8 +121,8 @@ Pipeline type skills provide production guidance for specific video formats, ind
 
 | Skill | File | When to Use |
 |-------|------|-------------|
-| Short-Form | `creative/short-form.md` | TikTok, Reels, Shorts â€" vertical 9:16, under 60s |
-| Long-Form | `creative/long-form.md` | YouTube 10+ min â€" chapters, retention, end screens |
+| Short-Form | `creative/short-form.md` | TikTok, Reels, Shorts - vertical 9:16, under 60s |
+| Long-Form | `creative/long-form.md` | YouTube 10+ min - chapters, retention, end screens |
 | Screen Recording | `creative/screen-recording.md` | Code walkthroughs, tutorials, software demos |
 | Animation Pipeline | `creative/animation-pipeline.md` | Motion graphics, easing, transitions, composition |
 | Cinematic | `creative/cinematic.md` | Letterbox, film pacing, layered audio, color grading |
@@ -300,7 +300,7 @@ Claude Code accesses them via symlinks in `.claude/skills/`.
 | **Video Composition** | `remotion-best-practices`, `remotion` | `remotion-dev/skills`, `digitalsamba/claude-code-video-toolkit` |
 | **Video Processing** | `ffmpeg`, `video_toolkit` | `digitalsamba/claude-code-video-toolkit` |
 | **TTS & Audio** | `text-to-speech`, `speech-to-text`, `music`, `sound-effects`, `elevenlabs`, `agents`, `setup-api-key` | `elevenlabs/skills`, `digitalsamba/claude-code-video-toolkit` |
-| **Image Generation** | `flux-best-practices`, `bfl-api`, `grok-media` | `black-forest-labs/skills`, local OpenMontage skill |
+| **Image Generation** | `flux-best-practices`, `bfl-api`, `grok-media` | `black-forest-labs/skills`, local Streamdex skill |
 | **Math Animation** | `manimce-best-practices`, `manimgl-best-practices`, `manim-composer` | `adithya-s-k/manim_skill` |
 | **3D Graphics** | `threejs-animation`, `threejs-fundamentals`, `threejs-geometry`, `threejs-interaction`, `threejs-lighting`, `threejs-loaders`, `threejs-materials`, `threejs-postprocessing`, `threejs-shaders`, `threejs-textures` | `cloudai-x/threejs-skills` |
 | **Diagrams** | `beautiful-mermaid`, `d3-viz` | `intellectronica/agent-skills`, `davila7/claude-code-templates` |
