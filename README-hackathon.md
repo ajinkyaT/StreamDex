@@ -2,62 +2,52 @@
 
 ## Build your own video stream.
 
-### Watch your signal, not the algorithm.
+Streamdex turns trusted tools and sources into short video briefings. Instead of reading across tabs, dashboards, and docs, users get a concise update built from the signal they already trust.
 
-Streamdex turns MCP-connected tools and trusted sources into short personal video briefings. Instead of reading across tabs, dashboards, and docs, you get a clear stream of what matters in a format people actually want to watch.
+`Morning market brief.` `Architecture recap.` `End-of-day work summary.`
 
-`Morning market brief.` `Technical architecture explainer.` `End-of-day work summary.`
+## What It Does
+
+- Connects MCP-enabled tools and trusted sources like broker data, news, docs, repos, calendars, and internal systems.
+- Pulls the most relevant context and turns it into an evidence-backed video briefing.
+- Supports recurring briefings through Codex automations.
+- Works as a portable workflow for individual use and team knowledge-sharing.
 
 ## Why Streamdex
 
-Today, algorithms decide what people watch, what gets buried, and what gets repeated. At the same time, important information is scattered across dashboards, docs, feeds, repos, and internal tools. Even when the signal is valuable, consuming it still feels like work.
+Information is already everywhere. The hard part is making it easy to consume.
 
-Streamdex changes that.
+Streamdex changes the format, not just the model. It turns scattered context into a short video people can watch in under a minute, instead of forcing them to sift through tabs and text.
 
-Instead of being controlled by algorithmic feeds, users create a private video stream from the tools and sources they already trust. Connect MCP-powered inputs like broker data, news, docs, repos, calendars, or internal systems, and Streamdex turns that context into short, personalized, evidence-backed video briefings.
+## Key Capabilities
 
-For a consumer, that could be a daily morning market briefing. For a builder or team, it could be a 60-second architecture explainer or an end-of-day recap of what changed across their work. Instead of reading through tabs and text, they just watch the brief.
+- Source-first briefings from the user’s own tools and data.
+- Personalized ranking and summarization instead of generic output.
+- Video-first delivery for quick daily consumption.
+- Recurring morning, evening, or on-demand updates.
+- A workflow that can live inside Codex and other Streamdex-compatible surfaces.
 
-## How It Works
+## Demo Flow
 
-1. Connect MCP-enabled tools and trusted sources.
-2. Choose the kind of briefing you want.
-3. Streamdex gathers context, ranks signal, and generates a short video update.
-4. Deliver the video where the user already lives.
+For a 2-minute submission video, keep the narration tight and let the sample clips carry the middle of the demo.
 
-This is not just AI video generation. Streamdex is a personal broadcast layer for the MCP ecosystem.
+| Time | Segment |
+|------|---------|
+| 0:00-0:10 | Hook: the problem with scattered tabs and feeds |
+| 0:10-0:25 | Show Streamdex connecting trusted sources |
+| 0:25-0:45 | Play the first sample briefing video |
+| 0:45-1:10 | Play the second sample briefing video |
+| 1:10-1:30 | Show a recurring automation or scheduled briefing |
+| 1:30-1:50 | Call out the core capabilities and product value |
+| 1:50-2:00 | Close with the positioning line |
 
-## Example Briefings
-
-- Daily morning market brief from broker data plus trusted news
-- Technical architecture explainer from repo, docs, and skills
-- End-of-day work summary from engineering and productivity tools
-- Topic explainers built from a user's own knowledge sources
-
-## Core Value
-
-- **Own the input.** Connect broker data, news, docs, repos, and other MCP-enabled tools from sources you trust.
-- **Watch the output.** Streamdex converts that context into concise, polished video briefings for quick daily consumption.
-- **Use it anywhere.** Run it through Codex app automations, extend it as a Streamdex skill in OpenClaw, and deliver the result to messaging surfaces like WhatsApp.
-
-## Ecosystem
-
-Streamdex fits naturally into Codex app automations for recurring briefings, like a personal daily morning update or an end-of-day recap. But it is not limited to Codex.
-
-The same workflow can run as a Streamdex skill in OpenClaw and send finished videos to user-friendly channels like WhatsApp, so the stream follows the user instead of being trapped inside one interface.
+If the sample videos run long, trim the hook and closing first so the total stays under two minutes.
 
 ## Product Positioning
 
 Your sources. Your ranking. Your format. Your stream.
 
 Streamdex helps users build their own stream from trusted tools and sources instead of relying on feeds that decide what matters for them.
-
-## Demo Flow
-
-1. Connect broker/news MCP and generate a market report for a chosen date.
-2. Connect repo/docs/internal tools and generate a 60-second architecture or work recap video.
-3. Show Codex automations generating recurring morning and evening briefings.
-4. Show the same flow extending beyond Codex via an OpenClaw skill and delivery to WhatsApp.
 
 ## Taglines
 

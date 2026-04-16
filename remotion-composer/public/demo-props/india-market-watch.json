@@ -1,0 +1,127 @@
+{
+  "theme": "clean-professional",
+  "renderer_family": "explainer-data",
+  "cuts": [
+    {
+      "id": "sc1-open",
+      "source": "india-market-watch-2026-04-16/sc1_opening_broll.mp4",
+      "in_seconds": 0,
+      "out_seconds": 5,
+      "transition_in": "fade",
+      "transition_out": "fade",
+      "backgroundColor": "#0F172A",
+      "reason": "Short India city/market opener for the cold open."
+    },
+    {
+      "id": "sc2-indices",
+      "source": "",
+      "type": "kpi_grid",
+      "in_seconds": 5,
+      "out_seconds": 18,
+      "title": "Opening Pulse",
+      "chartData": [
+        {
+          "label": "Sensex +566 at the open",
+          "value": 78639,
+          "icon": "\u25b2"
+        },
+        {
+          "label": "Nifty +162 in early trade",
+          "value": 24330,
+          "icon": "\u25b2"
+        }
+      ],
+      "chartColors": [
+        "#2563EB",
+        "#F59E0B"
+      ],
+      "columns": 2,
+      "backgroundColor": "#FFFFFF",
+      "reason": "Show the two headline index moves cleanly."
+    },
+    {
+      "id": "sc3-rupee",
+      "source": "",
+      "type": "stat_card",
+      "in_seconds": 18,
+      "out_seconds": 31,
+      "stat": "93.28",
+      "subtitle": "Rupee firmer; India VIX down 9.5%",
+      "accentColor": "#2563EB",
+      "backgroundColor": "#F3F4F6",
+      "reason": "Let the currency level and softer volatility land.",
+      "color": "#1F2937"
+    },
+    {
+      "id": "sc4-risk",
+      "source": "",
+      "type": "callout",
+      "in_seconds": 31,
+      "out_seconds": 45,
+      "title": "Risk gauges still matter",
+      "text": "Brent sits just under 95 dollars, and de-escalation in West Asia is keeping pressure contained for now.",
+      "callout_type": "warning",
+      "backgroundColor": "#FFFBEB",
+      "color": "#1F2937",
+      "accentColor": "#F59E0B",
+      "reason": "Use a warning callout to frame crude and geopolitics."
+    },
+    {
+      "id": "sc5-close",
+      "source": "",
+      "type": "text_card",
+      "in_seconds": 45,
+      "out_seconds": 59.4,
+      "text": "Foreign flows are still the bigger tell underneath the bounce. If crude cools and flows stabilize, this rally can extend.",
+      "subtitle": "Green open, yes. Easy close, no.",
+      "color": "#1F2937",
+      "backgroundColor": "#FFFFFF",
+      "reason": "Land the cautionary close with room to breathe."
+    }
+  ],
+  "overlays": [
+    {
+      "type": "section_title",
+      "in_seconds": 1,
+      "out_seconds": 4,
+      "text": "Market Watch Today",
+      "subtitle": "India opening bell pulse",
+      "accentColor": "#2563EB",
+      "position": "top-left"
+    },
+    {
+      "type": "stat_reveal",
+      "in_seconds": 19,
+      "out_seconds": 22,
+      "text": "93.28",
+      "subtitle": "Rupee against the dollar",
+      "accentColor": "#2563EB",
+      "position": "bottom-right"
+    },
+    {
+      "type": "section_title",
+      "in_seconds": 33,
+      "out_seconds": 37,
+      "text": "Risk gauges",
+      "subtitle": "Crude and geopolitics",
+      "accentColor": "#F59E0B",
+      "position": "top-right"
+    }
+  ],
+  "captions": [],
+  "audio": {
+    "narration": {
+      "src": "india-market-watch-2026-04-16/narration.mp3",
+      "volume": 1
+    }
+  },
+  "metadata": {
+    "project_id": "india-market-watch-2026-04-16",
+    "visual_style": "clean-professional",
+    "asset_paths": {
+      "narration": "/Users/ajinkya/Documents/projects/codex_Hackathon/projects/india-market-watch-2026-04-16/assets/audio/narration.mp3",
+      "opening_video": "/Users/ajinkya/Documents/projects/codex_Hackathon/projects/india-market-watch-2026-04-16/assets/video/sc1_opening_broll.mp4"
+    },
+    "notes": "Remotion render props use richer cut metadata; canonical edit checkpoint stays schema-valid separately."
+  }
+}

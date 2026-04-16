@@ -60,14 +60,14 @@ class OpenAIImage(BaseTool):
             "prompt": {"type": "string"},
             "model": {
                 "type": "string",
-                "enum": ["gpt-image-1", "dall-e-3"],
-                "default": "gpt-image-1",
+                "enum": ["gpt-image-1.5", "gpt-image-1", "gpt-image-1-mini"],
+                "default": "gpt-image-1.5",
             },
             "size": {
                 "type": "string",
                 "enum": [
                     "1024x1024", "1536x1024", "1024x1536", "auto",
-                    "1024x1792", "1792x1024",  # dall-e-3 only
+                    "1024x1792", "1792x1024",  # supported by gpt-image-1.5
                 ],
                 "default": "1024x1024",
             },
@@ -100,15 +100,13 @@ class OpenAIImage(BaseTool):
         return ToolStatus.UNAVAILABLE
 
     def estimate_cost(self, inputs: dict[str, Any]) -> float:
-        model = inputs.get("model", "gpt-image-1")
+        model = inputs.get("model", "gpt-image-1.5")
         quality = inputs.get("quality", "high")
         n = inputs.get("n", 1)
-        if model == "gpt-image-1":
-            cost_map = {"low": 0.011, "medium": 0.042, "high": 0.167, "auto": 0.042}
-            return cost_map.get(quality, 0.042) * n
-        # dall-e-3 fallback pricing
-        quality_map = {"standard": 0.04, "hd": 0.08}
-        return quality_map.get(quality, 0.04) * n
+        
+        # pricing estimation for gpt-image models
+        cost_map = {"low": 0.011, "medium": 0.042, "high": 0.167, "auto": 0.042}
+        return cost_map.get(quality, 0.042) * n
 
     def execute(self, inputs: dict[str, Any]) -> ToolResult:
         if not os.environ.get("OPENAI_API_KEY"):
@@ -121,36 +119,23 @@ class OpenAIImage(BaseTool):
 
         start = time.time()
         client = OpenAI()
-        model = inputs.get("model", "gpt-image-1")
+        model = inputs.get("model", "gpt-image-1.5")
         prompt = inputs["prompt"]
         size = inputs.get("size", "1024x1024")
         n = inputs.get("n", 1)
 
         try:
-            if model == "gpt-image-1":
-                quality = inputs.get("quality", "high")
-                output_format = inputs.get("output_format", "png")
-                response = client.images.generate(
-                    model=model,
-                    prompt=prompt,
-                    size=size,
-                    quality=quality,
-                    output_format=output_format,
-                    n=n,
-                )
-            else:
-                # dall-e-3 path
-                quality = inputs.get("quality", "standard")
-                if quality in ("low", "medium", "high", "auto"):
-                    quality = "standard"  # map to dall-e-3 quality options
-                response = client.images.generate(
-                    model=model,
-                    prompt=prompt,
-                    size=size,
-                    quality=quality,
-                    n=1,  # dall-e-3 only supports n=1
-                    response_format="b64_json",
-                )
+            quality = inputs.get("quality", "high")
+            output_format = inputs.get("output_format", "png")
+            response = client.images.generate(
+                model=model,
+                prompt=prompt,
+                size=size,
+                quality=quality,
+                output_format=output_format,
+                n=n,
+                response_format="b64_json",
+            )
 
             image_data = base64.b64decode(response.data[0].b64_json)
             ext = inputs.get("output_format", "png")

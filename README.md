@@ -22,9 +22,9 @@
 
 ---
 
-Turn your AI coding assistant into a full video production studio. Describe what you want in plain language — your agent handles research, scripting, asset generation, editing, and final composition.
+Turn your AI coding assistant into a full video production studio. Describe what you want in plain language, and the agent handles research, scripting, asset generation, editing, and final composition.
 
-**Important distinction:** Streamdex can make image-based videos, but it can also make a real **video video** for free/open-source workflows: the agent builds a corpus from free stock footage and open archives, retrieves actual motion clips, edits them into a timeline, and renders a finished piece. That is not the usual "animate a handful of stills and call it video" trick.
+**Important distinction:** Streamdex can make image-based videos, but it can also build a real motion-video timeline from free stock footage and open archives. It retrieves actual clips, edits them intentionally, and renders a finished piece instead of simply animating stills.
 
 <div align="center">
   <video src="https://github.com/user-attachments/assets/f77ce7a4-68b8-4f94-a287-e94bf50a32e1" width="100%" controls></video>
@@ -72,7 +72,7 @@ Streamdex can start from a **YouTube video, Short, Reel, TikTok, or local clip**
 
 1. **Paste a reference video**
 2. **The agent analyzes transcript, pacing, scenes, keyframes, and style**
-3. **You get 2-3 differentiated concepts, an honest tool path, cost estimates, and a sample before full production**
+3. **You get 2-3 differentiated concepts, a clear tool path, cost estimates, and a sample before full production**
 
 ```text
 "Here's a YouTube Short I love. Make me something like this, but about quantum computing."
@@ -80,9 +80,9 @@ Streamdex can start from a **YouTube video, Short, Reel, TikTok, or local clip**
 
 What you get back is not "best guess prompt spaghetti." You get:
 
-- **What it keeps** from the reference: pacing, hook style, structure, tone
-- **What it changes**: topic, visual treatment, angle, narration approach
-- **What it will cost** at your target duration, before asset generation starts
+- **What it keeps** from the reference: pacing, hook style, structure, and tone
+- **What it changes**: topic, visual treatment, angle, and narration approach
+- **What it will cost** at your target duration before asset generation starts
 - **What it will actually look like** with your currently available tools
 
 Works with **Claude Code, Cursor, Copilot, Windsurf, Codex** — any AI coding assistant that can read files and run code.
@@ -118,7 +118,7 @@ Or if you want the real-footage path:
 "Make a 75-second documentary montage about city life in the rain. Use real footage only, no narration, elegiac tone, with music."
 ```
 
-That's it. The agent researches your topic with live web search, generates AI images, writes and narrates the script with voice direction, finds royalty-free background music automatically, burns in word-level subtitles, and renders the final video. Before you see anything, the system runs a multi-point self-review — ffprobe validation, frame sampling, audio level analysis, delivery promise verification, and subtitle checks. Every provider selection is scored across 7 dimensions with an auditable decision log. Every creative decision gets your approval.
+That's it. The agent researches your topic with live web search, generates visuals, writes and narrates the script, finds royalty-free background music automatically, burns in word-level subtitles, and renders the final video. Before you see anything, the system runs a multi-point self-review: ffprobe validation, frame sampling, audio level analysis, delivery-promise verification, and subtitle checks. Every provider selection is scored across 7 dimensions with an auditable decision log, and every creative decision gets your approval.
 
 > **No `make`?** Run manually: `pip install -r requirements.txt && cd remotion-composer && npm install && cd .. && pip install piper-tts && cp .env.example .env`
 >
@@ -189,17 +189,17 @@ You don't need paid API keys to make real videos. Out of the box, `make setup` g
 
 | Capability | Free Tool | What It Does |
 |-----------|-----------|-------------|
-| **Narration** | Piper TTS | Free offline text-to-speech — real human-sounding narration |
-| **Open footage** | Archive.org + NASA + Wikimedia Commons | Free/open archival footage, educational media, and documentary texture |
-| **Extra stock** | Pexels + Unsplash + Pixabay | Free stock footage/images (developer keys are free to get) |
-| **Composition** | Remotion | Turns still images into animated video with spring physics, transitions, typography, and TikTok-style captions |
-| **Post-production** | FFmpeg | Encoding, subtitle burn-in, audio mixing, color grading |
+| **Narration** | Piper TTS | Offline text-to-speech for human-sounding narration |
+| **Open footage** | Archive.org + NASA + Wikimedia Commons | Free archival motion footage, educational media, and documentary texture |
+| **Extra stock** | Pexels + Unsplash + Pixabay | Optional stock footage and images with free developer keys |
+| **Composition** | Remotion | Turns still images into animated timelines with transitions, typography, and captions |
+| **Post-production** | FFmpeg | Encoding, subtitle burn-in, audio mixing, and color grading |
 | **Subtitles** | Built-in | Auto-generated captions with word-level timing |
 
 **Two free-ish paths:**
 
-- **Image-based video:** Piper narrates your script, images provide the visuals, and Remotion animates them into a polished edit.
-- **Real-footage video:** the documentary montage pipeline builds a CLIP-searchable corpus from Archive.org, NASA, Wikimedia Commons, and optional free-key sources like Pexels and Unsplash, then cuts together actual motion footage into a finished video.
+- **Image-based video:** Piper narrates your script, images provide the visuals, and Remotion turns them into a polished edit.
+- **Real-footage video:** the documentary montage pipeline builds a CLIP-searchable corpus from Archive.org, NASA, Wikimedia Commons, and optional free-key sources like Pexels and Unsplash, then cuts actual motion footage into a finished video.
 
 If you want the second one, prompt for a **documentary montage**, **tone poem**, or **stock-footage collage**, and explicitly say **use real footage only**.
 
@@ -259,15 +259,15 @@ Each pipeline is a complete production workflow, from idea to finished video.
 
 | Pipeline | What It Produces | Best For |
 |----------|-----------------|----------|
-| **Animated Explainer** | AI-generated explainer with research, narration, visuals, music | Educational content, tutorials, topic breakdowns |
-| **Animation** | Motion graphics, kinetic typography, animated sequences | Social media, product demos, abstract concepts |
+| **Animated Explainer** | Research-backed explainer with narration, visuals, and music | Educational content, tutorials, topic breakdowns |
+| **Animation** | Motion graphics, kinetic typography, and animated sequences | Social media, product demos, abstract concepts |
 | **Avatar Spokesperson** | Avatar-driven presenter videos | Corporate comms, training, announcements |
 | **Cinematic** | Trailer, teaser, and mood-driven edits | Brand films, teasers, promotional content |
-| **Clip Factory** | Batch of ranked short-form clips from one long source | Repurposing long content for social media |
-| **Documentary Montage** | Thematic montage cut from a CLIP-indexed corpus of free stock footage and open archives (Pexels, Archive.org, NASA, Wikimedia, Unsplash) | Video essays, mood pieces, retrieval-first B-roll edits, real-footage videos without paid generation APIs |
-| **Hybrid** | Source footage + AI-generated support visuals | Enhancing existing footage with graphics |
+| **Clip Factory** | Ranked short-form clips from one long source | Repurposing long content for social media |
+| **Documentary Montage** | Thematic montage from free stock footage and open archives (Pexels, Archive.org, NASA, Wikimedia, Unsplash) | Video essays, mood pieces, retrieval-first B-roll edits, real-footage videos without paid generation APIs |
+| **Hybrid** | Source footage plus AI-generated support visuals | Enhancing existing footage with graphics |
 | **Localization & Dub** | Subtitle, dub, and translate existing video | Multi-language distribution |
-| **Podcast Repurpose** | Podcast highlights to video | Podcast marketing, audiogram videos |
+| **Podcast Repurpose** | Podcast highlights turned into video | Podcast marketing, audiogram videos |
 | **Screen Demo** | Polished software screen recordings and walkthroughs | Product demos, tutorials, documentation |
 | **Talking Head** | Footage-led speaker videos | Presentations, vlogs, interviews |
 
@@ -285,22 +285,22 @@ Each stage has a dedicated **director skill** — a markdown instruction file th
 
 ## Why Streamdex?
 
-Most AI video tools give you a single clip from a prompt. Streamdex gives you an **end-to-end production pipeline** — the same structured process a real production team follows, automated by your AI agent.
+Streamdex gives you an **end-to-end production pipeline** — the same structured process a real production team follows, automated by your AI agent.
 
-Most "free AI video" stacks quietly mean "animate still images." Streamdex can do that too, but it can also build a finished video from **real footage** pulled from free/open sources, ranked semantically, edited intentionally, and rendered as a proper timeline.
+It can generate image-led videos or build a finished edit from **real footage** pulled from free/open sources, ranked semantically, edited intentionally, and rendered as a proper timeline.
 
-Edit your own talking-head footage. Generate a fully animated explainer from scratch. Cut a 2-hour podcast into a dozen social clips. Translate and dub your content into 10 languages. Build a cinematic brand teaser from stock footage and AI-generated scenes. **If a production team can make it, Streamdex can orchestrate it.**
+Use it to edit your own talking-head footage, generate a fully animated explainer from scratch, cut a 2-hour podcast into social clips, translate and dub content into 10 languages, or build a cinematic brand teaser from stock footage and AI-generated scenes. **If a production team can make it, Streamdex can orchestrate it.**
 
-- **12 production pipelines** — explainers, talking heads, screen demos, cinematic trailers, animations, podcasts, localization, documentary montages, and more
-- **52 production tools** — spanning video generation, image creation, text-to-speech, music, audio mixing, subtitles, enhancement, and analysis
-- **400+ agent skills** — production skills, pipeline directors, creative techniques, quality checklists, and deep technology knowledge packs that teach the agent how to use every tool like an expert
-- **Reference-driven creation** — paste a video you like and the agent turns it into a grounded, differentiated production plan instead of forcing you to invent the perfect prompt from scratch
-- **Real-footage documentary creation without paid video models** — build actual edited videos from free/open motion footage and archival sources, not just Ken Burns over images
-- **Live web research built in** — before writing a single word of script, the agent runs 15-25+ web searches across YouTube, Reddit, news sites, and academic sources to ground your video in real, current data
-- **Both free/local AND cloud providers** — every capability supports open-source local alternatives alongside premium APIs. Use what you have.
-- **No vendor lock-in** — swap providers freely. The scored selector ranks every provider across 7 dimensions (task fit, output quality, control, reliability, cost efficiency, latency, continuity) and picks the best match automatically.
-- **Production-grade quality gates** — delivery promise enforcement blocks slideshow-looking renders, pre-compose validation catches broken plans before wasting GPU time, and mandatory post-render self-review (ffprobe + frame extraction + audio analysis) ensures the agent never presents garbage. Every provider choice, style decision, and fallback gets logged in an auditable decision trail.
-- **Budget governance built in** — cost estimation before execution, spend caps, per-action approval thresholds. No surprise bills.
+- **12 production pipelines** for explainers, talking heads, screen demos, cinematic trailers, animations, podcasts, localization, documentary montages, and more
+- **52 production tools** spanning video generation, image creation, text-to-speech, music, audio mixing, subtitles, enhancement, and analysis
+- **400+ agent skills** covering production skills, pipeline directors, creative techniques, quality checklists, and deep technology knowledge packs
+- **Reference-driven creation** that turns a video you like into a grounded, differentiated production plan
+- **Real-footage documentary creation without paid video models** from free/open motion footage and archival sources
+- **Live web research built in** with 15-25+ searches across YouTube, Reddit, news sites, and academic sources before scripting starts
+- **Both free/local and cloud providers** so every capability works with open-source alternatives alongside premium APIs
+- **No vendor lock-in** because the scored selector ranks providers across 7 dimensions and picks the best match automatically
+- **Production-grade quality gates** with delivery checks, pre-compose validation, and post-render self-review
+- **Budget governance built in** with cost estimation, spend caps, and per-action approval thresholds
 
 ---
 

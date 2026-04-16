@@ -1,0 +1,104 @@
+1
+00:00:00,600 --> 00:00:06,280
+Your attention is scarce, but every day feeds, taps, and algorithms decide what gets it.
+
+2
+00:00:06,740 --> 00:00:08,280
+What if you could take that control back?
+
+3
+00:00:08,780 --> 00:00:14,160
+You already have the signal, your calendar, talks, messages, projects, watchlists, and
+
+4
+00:00:14,160 --> 00:00:15,400
+the assistants connected to them.
+
+5
+00:00:15,960 --> 00:00:18,300
+But most of it still comes back as more text.
+
+6
+00:00:18,920 --> 00:00:22,000
+And before the day even starts, nobody wants another wall of text.
+
+7
+00:00:23,100 --> 00:00:24,420
+Streamed text changes the format.
+
+8
+00:00:25,200 --> 00:00:29,460
+Inside the Codex app, it turns your trusted sources into a short personalized video briefing
+
+9
+00:00:29,460 --> 00:00:32,840
+you can actually watch, not what the algorithms want to push.
+
+10
+00:00:33,500 --> 00:00:34,420
+What you need to know.
+
+11
+00:00:35,160 --> 00:00:39,640
+Here is a new style explainer on the NPM Supply Chain attack built from trusted sources, ranked
+
+12
+00:00:39,640 --> 00:00:41,940
+for relevance, and delivered as a concise video.
+
+13
+00:00:42,460 --> 00:00:45,900
+More engaging than a summary, faster to absorb than a wall of text.
+
+14
+00:00:46,360 --> 00:00:47,760
+But this is bigger than news video.
+
+15
+00:00:48,460 --> 00:00:53,780
+Streamed text can create a daily plan, a project recap, a news digest, an architecture update,
+
+16
+00:00:54,060 --> 00:00:56,960
+a team handoff, or a recap from the tools you have connected.
+
+17
+00:00:57,800 --> 00:00:59,940
+If you can connect the tools, you can build the stream.
+
+18
+00:01:00,620 --> 00:01:04,420
+And because streamed text runs inside the Codex app, you can schedule automations to
+
+19
+00:01:04,420 --> 00:01:06,660
+generate these briefings before your day starts.
+
+20
+00:01:07,140 --> 00:01:11,260
+So on a metro ride, you can watch what is planned for the day, what changed overnight,
+
+21
+00:01:11,680 --> 00:01:14,520
+and what your other automations already finished for you.
+
+22
+00:01:14,900 --> 00:01:19,940
+Instead of opening 5 apps and reading 5 summaries, you can get one briefing in a format built
+
+23
+00:01:19,940 --> 00:01:20,520
+for attention.
+
+24
+00:01:21,260 --> 00:01:24,800
+Your sources, your ranking, your format, your stream.
+
+25
+00:01:25,400 --> 00:01:26,000
+Streamed text.
+
+26
+00:01:26,000 --> 00:01:28,260
+Watch your signal, not the algorithm.
+

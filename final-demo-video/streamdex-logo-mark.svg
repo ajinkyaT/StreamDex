@@ -1,0 +1,67 @@
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="ring" x1="230" y1="180" x2="790" y2="840" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#8BEFFF"/>
+      <stop offset="1" stop-color="#16D8FF"/>
+    </linearGradient>
+    <linearGradient id="playFill" x1="410" y1="350" x2="650" y2="650" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#C7FBFF"/>
+      <stop offset="0.45" stop-color="#42E7FF"/>
+      <stop offset="1" stop-color="#0ABFE6"/>
+    </linearGradient>
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="strongGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="22" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <circle cx="512" cy="512" r="324" stroke="url(#ring)" stroke-opacity="0.3" stroke-width="2"/>
+  <circle cx="512" cy="512" r="258" stroke="#16D8FF" stroke-opacity="0.22" stroke-width="2"/>
+
+  <g stroke="#8BEFFF" stroke-opacity="0.38" stroke-width="3">
+    <line x1="512" y1="188" x2="674" y2="230"/>
+    <line x1="674" y1="230" x2="792" y2="352"/>
+    <line x1="792" y1="352" x2="836" y2="512"/>
+    <line x1="836" y1="512" x2="792" y2="672"/>
+    <line x1="792" y1="672" x2="674" y2="794"/>
+    <line x1="674" y1="794" x2="512" y2="836"/>
+    <line x1="512" y1="836" x2="350" y2="794"/>
+    <line x1="350" y1="794" x2="232" y2="672"/>
+    <line x1="232" y1="672" x2="188" y2="512"/>
+    <line x1="188" y1="512" x2="232" y2="352"/>
+    <line x1="232" y1="352" x2="350" y2="230"/>
+    <line x1="350" y1="230" x2="512" y2="188"/>
+  </g>
+
+  <g fill="#8BEFFF" filter="url(#softGlow)">
+    <circle cx="512" cy="188" r="8"/>
+    <circle cx="674" cy="230" r="8"/>
+    <circle cx="792" cy="352" r="8"/>
+    <circle cx="836" cy="512" r="8"/>
+    <circle cx="792" cy="672" r="8"/>
+    <circle cx="674" cy="794" r="8"/>
+    <circle cx="512" cy="836" r="8"/>
+    <circle cx="350" cy="794" r="8"/>
+    <circle cx="232" cy="672" r="8"/>
+    <circle cx="188" cy="512" r="8"/>
+    <circle cx="232" cy="352" r="8"/>
+    <circle cx="350" cy="230" r="8"/>
+  </g>
+
+  <circle cx="512" cy="512" r="140" fill="#0D1F2F" fill-opacity="0.72"/>
+  <circle cx="512" cy="512" r="154" stroke="#16D8FF" stroke-opacity="0.28" stroke-width="2"/>
+
+  <g filter="url(#strongGlow)">
+    <path d="M422 372C422 357.641 437.848 349.102 449.77 356.936L658.566 494.189C669.427 501.326 669.898 517.02 659.487 524.797L450.691 680.878C438.908 689.689 422 681.28 422 666.567V372Z" fill="url(#playFill)"/>
+  </g>
+</svg>
